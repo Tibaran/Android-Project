@@ -13,7 +13,7 @@ class playas_subplayas : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playas_subplayas)
 
-        MyToolbar().show(this,"Inicio", false)
+        MyToolbar().show(this,"Playas", true)
         listaSub_Playas.layoutManager = GridLayoutManager(this,2)
         var llenarLista = ArrayList<ElementosCVPlaya>()
         for (i in 1 until 8){
