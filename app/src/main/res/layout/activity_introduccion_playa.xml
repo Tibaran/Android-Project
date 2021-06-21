@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/btnRestaurantes"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Restaurantes"/>
+    <TextView
+        android:id="@+id/btnLugares"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Lugares turisticos"/>
+    <TextView
+        android:id="@+id/btnHoteles"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Hoteles"/>
+    <TextView
+        android:id="@+id/btnInformacion"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Informacion"/>
+    <TextView
+        android:id="@+id/btnPlayas"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border"
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:text="Playas"/>
+
+</LinearLayout>

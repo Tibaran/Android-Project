@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inicio"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/Playas"
+        android:title="Playas"/>
+    <item
+        android:id="@+id/regiones"
+        android:title="Regiones"/>
+    <item
+        android:id="@+id/ayuda"
+        android:title="Ayuda"/>
+    <item
+        android:id="@+id/configuracion"
+        android:title="Configuraciones"/>
+</menu>

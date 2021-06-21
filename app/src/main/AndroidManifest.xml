@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.miempresa.proyectofinal">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProyectoFinal">
+        <activity android:name=".descripcionPlaya"
+            android:parentActivityName=".playas_subplayas"></activity>
+        <activity android:name=".introduccionPlayaLugares"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".playas_subplayas"
+            android:parentActivityName=".playas_lugar" />
+        <activity
+            android:name=".playas_lugar"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
