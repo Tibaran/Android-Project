@@ -17,7 +17,7 @@
                 android:layout_height="39dp"
                 android:layout_gravity="center"
                 android:background="@color/rojo"
-                android:src="@drawable/lugar" />
+                android:src="@drawable/sombrilla" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
