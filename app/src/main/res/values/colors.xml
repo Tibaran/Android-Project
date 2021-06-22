@@ -9,8 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="verde">#318843</color>
     <color name="rojo">#D32F2F</color>
-    <color name="celeste">#0CB2F4</color>
+    <color name="celeste">#8DDCFB</color>
     <color name="azul">#1545B9</color>
     <color name="azulOscuro">#0F348E</color>
     <color name="naranja">#F4AA3F</color>
+    <color name="plomo">#9B9C9A</color>
+    <color name="azulito">#076FD6</color>
 </resources>

@@ -2,17 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/inicio"
+        android:icon="@drawable/inicio"
         android:title="Inicio"/>
     <item
         android:id="@+id/Playas"
+        android:icon="@drawable/playas2"
         android:title="Playas"/>
     <item
         android:id="@+id/regiones"
+        android:icon="@drawable/regiones"
         android:title="Regiones"/>
     <item
         android:id="@+id/ayuda"
+        android:icon="@drawable/ayuda"
         android:title="Ayuda"/>
     <item
         android:id="@+id/configuracion"
+        android:icon="@drawable/configurar"
         android:title="Configuraciones"/>
+
+    <item
+        android:id="@+id/salir"
+        android:icon="@drawable/salir"
+        android:title="Salir"/>
 </menu>

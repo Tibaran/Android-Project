@@ -1,11 +1,9 @@
 package com.miempresa.proyectofinal
 
-import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.android.synthetic.main.activity_playas_lugar.*
 import kotlinx.android.synthetic.main.activity_playas_subplayas.*
 
 class playas_subplayas : AppCompatActivity() {
