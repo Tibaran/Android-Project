@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinal">
-        <activity android:name=".Splash"
+        <activity android:name=".Restaurantes"
+            android:parentActivityName=".introduccionPlayaLugares"></activity>
+        <activity
+            android:name=".Splash"
             android:theme="@style/Theme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +25,7 @@
             android:parentActivityName=".playas_subplayas" />
         <activity
             android:name=".introduccionPlayaLugares"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".playas_subplayas"
             android:parentActivityName=".playas_lugar" />
@@ -31,8 +34,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.NoActionBar"></activity>
     </application>
 
 </manifest>

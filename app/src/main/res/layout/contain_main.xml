@@ -25,7 +25,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Principal Playa"
+                    android:text="UbiBeach"
                     android:textColor="#FFFFFF"
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
 
@@ -59,19 +59,23 @@
                 android:orientation="horizontal">
 
 
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:text="   Playas  "
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:drawableLeft="@drawable/playas2"
+                    android:drawableRight="@drawable/playas2"
+                    android:drawableTint="@color/white"/>
+
                 <ImageView
                     android:id="@+id/btnplayas2"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
-                    android:adjustViewBounds="true"
-                    android:src="@drawable/playas"/>
-
-                <ImageView
-                    android:id="@+id/btnlugares"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
                     android:layout_marginLeft="20dp"
-                    android:src="@drawable/hotel"/>
+                    android:src="@drawable/playas"/>
             </LinearLayout>
 
         </LinearLayout>

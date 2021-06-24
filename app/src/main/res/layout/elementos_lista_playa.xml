@@ -35,6 +35,14 @@
                 android:layout_below="@+id/imgCardView"
                 android:layout_centerHorizontal="true"
                 android:text="Ver" />
+
+            <Button
+                android:id="@+id/btnLugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnVer"
+                android:layout_centerHorizontal="true"
+                android:text="Lugares" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

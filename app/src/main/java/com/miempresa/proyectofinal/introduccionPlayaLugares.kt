@@ -10,6 +10,11 @@ class introduccionPlayaLugares : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduccion_playa)
-        MyToolbar().show(this,"Inicio", false)
+        MyToolbar().show(this,"Lugares", true)
+
+        btnRestaurantes.setOnClickListener(){
+            val intent = Intent(this, Restaurantes::class.java)
+            startActivity(intent)
+        }
     }
 }

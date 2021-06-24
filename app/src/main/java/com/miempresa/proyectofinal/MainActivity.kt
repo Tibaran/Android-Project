@@ -41,11 +41,6 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
             val actividad = Intent(applicationContext, playas_lugar::class.java)
             startActivity(actividad)
         }
-
-        btnlugares.setOnClickListener {
-            val actividad = Intent(applicationContext, introduccionPlayaLugares::class.java)
-            startActivity(actividad)
-        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

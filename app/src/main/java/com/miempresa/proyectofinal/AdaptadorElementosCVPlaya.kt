@@ -27,10 +27,15 @@ class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>):
         val id = ListaElementos[position].id
 
         var button = holder.itemView.findViewById<Button>(R.id.btnVer)
+        var button2 = holder.itemView.findViewById<Button>(R.id.btnLugar)
         button.setOnClickListener(){
             Toast.makeText(holder.itemView.context, "Pulsaste boton dentro de cardView "+holder?.fTitulo.text, Toast.LENGTH_LONG).show()
             val llamaractividad = Intent(holder.itemView.context, playas_subplayas::class.java)
             llamaractividad.putExtra("id", id.toString())
+            holder.itemView.context.startActivity(llamaractividad)
+        }
+        button2.setOnClickListener(){
+            val llamaractividad = Intent(holder.itemView.context, introduccionPlayaLugares::class.java)
             holder.itemView.context.startActivity(llamaractividad)
         }
     }
