@@ -1,0 +1,13 @@
+package com.miempresa.proyectofinal
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class Policia : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_policia)
+
+        MyToolbar().show(this,"Policia", true)
+    }
+}

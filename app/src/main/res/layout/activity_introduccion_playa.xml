@@ -104,7 +104,7 @@
             android:textSize="25dp"
             android:text="Tienda"/>
         <Button
-            android:id="@+id/btnBombero"
+            android:id="@+id/btnTienda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -166,7 +166,7 @@
             android:textSize="25dp"
             android:text="Salvavidas"/>
         <Button
-            android:id="@+id/btnPostas"
+            android:id="@+id/btnSalva"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinal">
-        <activity android:name=".Restaurantes"
-            android:parentActivityName=".introduccionPlayaLugares"></activity>
+        <activity android:name=".Salvavidas"></activity>
+        <activity android:name=".Policia" />
+        <activity android:name=".Tienda" />
+        <activity android:name=".Bares" />
+        <activity android:name=".bares" />
+        <activity
+            android:name=".Restaurantes"
+            android:parentActivityName=".introduccionPlayaLugares" />
         <activity
             android:name=".Splash"
             android:theme="@style/Theme.NoActionBar">
@@ -34,7 +40,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.NoActionBar"></activity>
+            android:theme="@style/Theme.NoActionBar" />
     </application>
 
 </manifest>

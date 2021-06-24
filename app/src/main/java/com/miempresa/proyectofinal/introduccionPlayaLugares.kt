@@ -16,5 +16,22 @@ class introduccionPlayaLugares : AppCompatActivity() {
             val intent = Intent(this, Restaurantes::class.java)
             startActivity(intent)
         }
+
+        btnBar.setOnClickListener(){
+            val intent = Intent(this, Bares::class.java)
+            startActivity(intent)
+        }
+        btnTienda.setOnClickListener(){
+            val intent = Intent(this, Tienda::class.java)
+            startActivity(intent)
+        }
+        btnPolicia.setOnClickListener(){
+            val intent = Intent(this, Policia::class.java)
+            startActivity(intent)
+        }
+        btnSalva.setOnClickListener(){
+            val intent = Intent(this, Salvavidas::class.java)
+            startActivity(intent)
+        }
     }
 }
