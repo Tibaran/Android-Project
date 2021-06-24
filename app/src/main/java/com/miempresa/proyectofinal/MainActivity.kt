@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Toast.makeText(this, "Bienvenido!!!", Toast.LENGTH_LONG).show()
+
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
