@@ -10,7 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>): RecyclerView.Adapter<AdaptadorElementosCVSubPlaya.ViewHolder>(){
+class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVSubPlaya>): RecyclerView.Adapter<AdaptadorElementosCVSubPlaya.ViewHolder>(){
     override fun getItemCount(): Int {
         return ListaElementos.size;
     }
@@ -25,12 +25,15 @@ class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVPlaya
         holder?.fTitulo?.text=ListaElementos[position].titulo
         holder?.fImagen?.setImageBitmap(ListaElementos[position].imagen)
         val id = ListaElementos[position].id
+        val id_playa = ListaElementos[position].id_playa
 
-        var button = holder.itemView.findViewById<Button>(R.id.btnVer)
+        var button = holder.itemView.findViewById<Button>(R.id.btnSubPlaya)
+        button.setText("Ver Lugares")
         button.setOnClickListener(){
             Toast.makeText(holder.itemView.context, "Pulsaste boton dentro de cardView "+holder?.fTitulo.text, Toast.LENGTH_LONG).show()
             val llamaractividad = Intent(holder.itemView.context, descripcionPlaya::class.java)
             llamaractividad.putExtra("id", id.toString())
+            llamaractividad.putExtra("id_playa", id_playa.toString())
             holder.itemView.context.startActivity(llamaractividad)
         }
     }

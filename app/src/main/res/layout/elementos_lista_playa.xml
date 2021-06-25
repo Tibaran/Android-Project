@@ -1,48 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_margin="8dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="15dp">
 
+        <ImageView
+            android:id="@+id/imgCardView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/playa" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
             <TextView
                 android:id="@+id/lblTitulo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Titulo"
+                android:layout_margin="4dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imgCardView"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:layout_below="@id/lblTitulo"
-                app:srcCompat="@drawable/playa" />
-
-            <Button
-                android:id="@+id/btnVer"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imgCardView"
-                android:layout_centerHorizontal="true"
-                android:text="Ver" />
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btnSubPlaya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Playas" />
+                <Button
+                    android:id="@+id/btnEdificios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Edificios" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/btnLugar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btnVer"
-                android:layout_centerHorizontal="true"
-                android:text="Lugares" />
-        </RelativeLayout>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
