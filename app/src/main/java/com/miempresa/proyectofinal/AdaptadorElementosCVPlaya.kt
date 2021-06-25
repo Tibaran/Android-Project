@@ -26,8 +26,8 @@ class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>):
         holder?.fImagen?.setImageBitmap(ListaElementos[position].imagen)
         val id = ListaElementos[position].id
 
-        var button = holder.itemView.findViewById<Button>(R.id.btnVer)
-        var button2 = holder.itemView.findViewById<Button>(R.id.btnLugar)
+        var button = holder.itemView.findViewById<Button>(R.id.btnSubPlaya)
+        var button2 = holder.itemView.findViewById<Button>(R.id.btnEdificios)
         button.setOnClickListener(){
             Toast.makeText(holder.itemView.context, "Pulsaste boton dentro de cardView "+holder?.fTitulo.text, Toast.LENGTH_LONG).show()
             val llamaractividad = Intent(holder.itemView.context, playas_subplayas::class.java)
