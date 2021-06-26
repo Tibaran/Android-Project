@@ -1,5 +1,6 @@
 package com.miempresa.proyectofinal
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ import kotlinx.android.synthetic.main.activity_playas_subplayas.*
 import org.json.JSONException
 
 class playas_subplayas : AppCompatActivity() {
+    var id: String?=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playas_subplayas)
@@ -24,9 +26,15 @@ class playas_subplayas : AppCompatActivity() {
         MyToolbar().show(this,"SubPlayas", true)
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
-            cargarLista(bundle.getString("id").toString())
+            id = bundle.getString("id").toString()
+            cargarLista(id.toString())
         }
-
+        if(id.isNullOrEmpty()){
+            var estadorepo = EstadoRepositorio()
+            var estado:Estado = estadorepo.ver()
+            id = estado.id_playa
+            cargarLista(id.toString())
+        }
     }
     fun cargarLista(playa_id: String) {
         listaSub_Playas.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
@@ -68,7 +76,7 @@ class playas_subplayas : AppCompatActivity() {
                 }, Response.ErrorListener { response ->
                     Toast.makeText(
                         applicationContext,
-                        response.message,
+                        "Verifique su conexion de internet",
                         Toast.LENGTH_LONG
                     ).show()
                 })

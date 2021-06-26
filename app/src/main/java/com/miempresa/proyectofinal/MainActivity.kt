@@ -23,6 +23,11 @@ class MainActivity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var estadorepo = EstadoRepositorio()
+        if (estadorepo.count()<=0){
+            estadorepo.crearEstado()
+        }
+
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
 

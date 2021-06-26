@@ -30,7 +30,6 @@ class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVSubPl
         var button = holder.itemView.findViewById<Button>(R.id.btnSubPlaya)
         button.setText("Ver Lugares")
         button.setOnClickListener(){
-            Toast.makeText(holder.itemView.context, "Pulsaste boton dentro de cardView "+holder?.fTitulo.text, Toast.LENGTH_LONG).show()
             val llamaractividad = Intent(holder.itemView.context, descripcionPlaya::class.java)
             llamaractividad.putExtra("id", id.toString())
             llamaractividad.putExtra("id_playa", id_playa.toString())
@@ -39,7 +38,7 @@ class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVSubPl
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent?.context).inflate(R.layout.elementos_lista_playa,parent,false);
+        val v = LayoutInflater.from(parent?.context).inflate(R.layout.elementos_lista_subplaya,parent,false);
         return ViewHolder(v);
     }
 }
