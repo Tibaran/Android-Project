@@ -5,19 +5,24 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.StrictMode
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_playas_lugar.*
 import org.json.JSONException
 
 class playas_lugar : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playas_lugar)
+
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
         MyToolbar().show(this,"Playas Lugar", true)
@@ -41,7 +46,9 @@ class playas_lugar : AppCompatActivity() {
                                 response.getJSONObject(i).getString("nombre")
                             val ubicacion =
                                 response.getJSONObject(i).getString("ubicacion")
-                            llenarLista.add(ElementosCVPlaya(id,nombre,ubicacion,BitmapFactory.decodeResource(resources, R.drawable.playa)))
+                            val imagenurl =
+                                    response.getJSONObject(i).getString("imagePlay")
+                            llenarLista.add(ElementosCVPlaya(id,nombre,ubicacion, imagenurl))
                         }
                         val adapter = AdaptadorElementosCVPlaya(llenarLista)
                         listaPlayas.adapter = adapter
