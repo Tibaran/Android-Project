@@ -113,7 +113,7 @@ class playas_subplayas : AppCompatActivity() {
         var llenarLista = ArrayList<ElementosCVSubPlaya>()
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
-            val url = resources.getString(R.string.API_IP)+"/subplayas"
+            val url = resources.getString(R.string.API_IP)+"subbeaches"
             val stringRequest = JsonArrayRequest(url,
                 Response.Listener { response ->
                     try {

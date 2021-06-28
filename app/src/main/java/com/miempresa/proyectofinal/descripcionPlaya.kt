@@ -33,7 +33,7 @@ class descripcionPlaya : AppCompatActivity() {
         var llenarLista = ArrayList<ElementosCVLugar>()
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
-            val url = resources.getString(R.string.API_IP)+"/sombrillas"
+            val url = resources.getString(R.string.API_IP)+"umbrellas"
             val stringRequest = JsonArrayRequest(url,
                 Response.Listener { response ->
                     try {

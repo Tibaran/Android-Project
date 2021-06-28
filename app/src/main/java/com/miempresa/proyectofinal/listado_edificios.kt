@@ -43,15 +43,15 @@ class listado_edificios : AppCompatActivity() {
     fun rellenarListaEdificio(id_playa: String) {
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
-            val url = resources.getString(R.string.API_IP)+"/edificioplaya"
+            val url = resources.getString(R.string.API_IP)+"beachBuilding"
             val stringRequest = JsonArrayRequest(url,
                     Response.Listener { response ->
                         try {
                             for (i in 0 until response.length()) {
                                 val playa_id =
-                                        response.getJSONObject(i).getString("playa")
+                                        response.getJSONObject(i).getString("nombreEI")
                                 val edificio_id =
-                                        response.getJSONObject(i).getString("edificioInteres")
+                                        response.getJSONObject(i).getString("nombre")
                                 if (playa_id == id_playa){
                                     listEdificio.add(edificio_id)
                                 }
@@ -80,7 +80,7 @@ class listado_edificios : AppCompatActivity() {
         var llenarLista = ArrayList<ElementosCVEdificio>()
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
-            val url = resources.getString(R.string.API_IP)+"/edificiointeres"
+            val url = resources.getString(R.string.API_IP)+"/buildingsInterest"
             val stringRequest = JsonArrayRequest(url,
                     Response.Listener { response ->
                         try {
@@ -90,7 +90,7 @@ class listado_edificios : AppCompatActivity() {
                                 val id_tipo =
                                         response.getJSONObject(i).getString("tipoEdificio")
                                 val nombre =
-                                        response.getJSONObject(i).getString("nombre")
+                                        response.getJSONObject(i).getString("nombreEI")
                                 if(listEdificio.contains(id)){
                                     if(id_tipo == id_tipoEdificio){
                                         llenarLista.add(ElementosCVEdificio(id,nombre,BitmapFactory.decodeResource(resources, R.drawable.restaurante)))
