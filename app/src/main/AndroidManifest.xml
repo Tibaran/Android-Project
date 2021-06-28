@@ -49,15 +49,19 @@
             android:name=".Mapa"
             android:label="@string/title_activity_mapa"
             android:parentActivityName=".playas_lugar"></activity>
-        <activity android:name=".listado_edificios" />
+        <activity android:name=".listado_edificios"
+            android:parentActivityName=".introduccionPlayaLugares"/>
 
-        <activity android:name=".Salvavidas" />
-        <activity android:name=".Policia" />
-        <activity android:name=".Tienda" />
-        <activity android:name=".Bares" />
-        <activity
-            android:name=".Restaurantes"
-            android:parentActivityName=".introduccionPlayaLugares" />
+        <activity android:name=".Salvavidas"
+            android:parentActivityName=".listado_edificios"/>
+        <activity android:name=".Policia"
+            android:parentActivityName=".listado_edificios"/>
+        <activity android:name=".Tienda"
+            android:parentActivityName=".listado_edificios"/>
+        <activity android:name=".Bares"
+            android:parentActivityName=".listado_edificios"/>
+        <activity android:name=".Restaurantes"
+            android:parentActivityName=".listado_edificios" />
         <activity
             android:name=".Splash"
             android:theme="@style/Theme.NoActionBar">

@@ -1,6 +1,5 @@
 package com.miempresa.proyectofinal
 
-import android.content.Intent
 import android.graphics.BitmapFactory
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +7,6 @@ import android.os.Bundle
 import android.os.StrictMode
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
@@ -54,10 +52,10 @@ class playas_lugar : AppCompatActivity() {
                             Toast.LENGTH_LONG
                         ).show()
                     }
-                }, Response.ErrorListener { response ->
+                }, Response.ErrorListener {
                     Toast.makeText(
                         applicationContext,
-                        response.message,
+                        "Revise su conexion a internet",
                         Toast.LENGTH_LONG
                     ).show()
                 })
