@@ -90,9 +90,9 @@ class playas_subplayas : AppCompatActivity() {
 
 
                 ReNombre!!.text = ciudad
-                Temp!!.text = tem.toString()
-                TemMax!!.text = temMax.toString()
-                TemMin!!.text = temMin.toString()
+                Temp!!.text = tem.toString()+"°C"
+                TemMax!!.text = temMax.toString()+"°C"
+                TemMin!!.text = temMin.toString()+"°C"
 
                 var icon2 = mydata.weather!!.get(0).icon
 
