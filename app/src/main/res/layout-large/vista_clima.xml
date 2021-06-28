@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/celeste"
+    android:clickable="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+        <TextView
+            android:id="@+id/txtNomRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Nombre Region"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura: "
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/txtTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19ªC"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/temp"/>
+
+            <ImageView
+                android:id="@+id/imgclima"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginLeft="90dp"
+                app:layout_constraintLeft_toRightOf="@+id/txtTemp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/temp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temp. Max: "
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="35dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/temp"/>
+            <TextView
+                android:id="@+id/txtTemMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16ªC"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@id/temp2"
+                app:layout_constraintTop_toBottomOf="@+id/temp"/>
+
+            <TextView
+                android:id="@+id/temp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temp. Min"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintLeft_toRightOf="@id/txtTemMax"
+                app:layout_constraintTop_toBottomOf="@+id/temp"/>
+
+            <TextView
+                android:id="@+id/txtTemMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20ºC"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/black"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@id/temp3"
+                app:layout_constraintTop_toBottomOf="@+id/temp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
