@@ -24,7 +24,7 @@ class introduccionPlayaLugares : AppCompatActivity() {
         var estadorepo = EstadoRepositorio()
 
         btnRestaurantes.setOnClickListener(){
-            val intent = Intent(this, Restaurantes::class.java)
+            val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
             intent.putExtra("id_tipoEdificio", "1")
             estadorepo.actualizarCategoria("1")
@@ -32,28 +32,28 @@ class introduccionPlayaLugares : AppCompatActivity() {
         }
 
         btnBar.setOnClickListener(){
-            val intent = Intent(this, Bares::class.java)
+            val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
             intent.putExtra("id_tipoEdificio", "2")
             estadorepo.actualizarCategoria("2")
             startActivity(intent)
         }
         btnTienda.setOnClickListener(){
-            val intent = Intent(this, Tienda::class.java)
+            val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
             intent.putExtra("id_tipoEdificio", "3")
             estadorepo.actualizarCategoria("3")
             startActivity(intent)
         }
         btnPolicia.setOnClickListener(){
-            val intent = Intent(this, Policia::class.java)
+            val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
             intent.putExtra("id_tipoEdificio", "4")
             estadorepo.actualizarCategoria("4")
             startActivity(intent)
         }
         btnSalva.setOnClickListener(){
-            val intent = Intent(this, Salvavidas::class.java)
+            val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
             intent.putExtra("id_tipoEdificio", "5")
             estadorepo.actualizarCategoria("5")

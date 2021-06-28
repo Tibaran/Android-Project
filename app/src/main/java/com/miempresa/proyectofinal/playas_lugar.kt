@@ -41,7 +41,9 @@ class playas_lugar : AppCompatActivity() {
                                 response.getJSONObject(i).getString("id")
                             val nombre =
                                 response.getJSONObject(i).getString("nombre")
-                            llenarLista.add(ElementosCVPlaya(id,nombre,BitmapFactory.decodeResource(resources, R.drawable.playa)))
+                            val ubicacion =
+                                response.getJSONObject(i).getString("ubicacion")
+                            llenarLista.add(ElementosCVPlaya(id,nombre,ubicacion,BitmapFactory.decodeResource(resources, R.drawable.playa)))
                         }
                         val adapter = AdaptadorElementosCVPlaya(llenarLista)
                         listaPlayas.adapter = adapter

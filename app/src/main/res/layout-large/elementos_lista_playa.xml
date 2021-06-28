@@ -47,6 +47,12 @@
                     android:text="Ver Edificios"
                     android:padding="15dp"
                     android:textSize="20sp"/>
+                <ImageButton
+                    android:id="@+id/btnUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/regiones" />
             </LinearLayout>
 
         </LinearLayout>

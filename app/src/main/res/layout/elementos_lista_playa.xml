@@ -27,6 +27,7 @@
                 android:layout_margin="4dp"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,6 +44,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Ver Edificios" />
+
+                <ImageButton
+                    android:id="@+id/btnUbicacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/regiones" />
             </LinearLayout>
 
         </LinearLayout>

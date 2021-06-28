@@ -4,10 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 
 class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>): RecyclerView.Adapter<AdaptadorElementosCVPlaya.ViewHolder>(){
@@ -24,10 +21,12 @@ class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>):
 
         holder?.fTitulo?.text=ListaElementos[position].titulo
         holder?.fImagen?.setImageBitmap(ListaElementos[position].imagen)
+        val ubicacion = ListaElementos[position].ubicacion
         val id = ListaElementos[position].id
 
         var button = holder.itemView.findViewById<Button>(R.id.btnSubPlaya)
         var button2 = holder.itemView.findViewById<Button>(R.id.btnEdificios)
+        var button3 = holder.itemView.findViewById<ImageButton>(R.id.btnUbicacion)
         button.setOnClickListener(){
             var estadorepo = EstadoRepositorio()
             estadorepo.actualizarPlaya(id)
@@ -39,6 +38,11 @@ class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>):
             var estadorepo = EstadoRepositorio()
             estadorepo.actualizarPlaya(id)
             val llamaractividad = Intent(holder.itemView.context, introduccionPlayaLugares::class.java)
+            holder.itemView.context.startActivity(llamaractividad)
+        }
+        button3.setOnClickListener(){
+            val llamaractividad = Intent(holder.itemView.context, Mapa::class.java)
+            llamaractividad.putExtra("ubicacion",ubicacion)
             holder.itemView.context.startActivity(llamaractividad)
         }
     }
