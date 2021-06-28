@@ -53,6 +53,7 @@
                 app:layout_constraintLeft_toRightOf="@+id/temp"/>
 
             <ImageView
+                android:id="@+id/imgclima"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher"

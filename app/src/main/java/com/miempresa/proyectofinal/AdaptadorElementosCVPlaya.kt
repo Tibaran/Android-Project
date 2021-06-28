@@ -32,6 +32,7 @@ class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>):
             estadorepo.actualizarPlaya(id)
             val llamaractividad = Intent(holder.itemView.context, playas_subplayas::class.java)
             llamaractividad.putExtra("id", id.toString())
+            llamaractividad.putExtra("ubicacion",ubicacion)
             holder.itemView.context.startActivity(llamaractividad)
         }
         button2.setOnClickListener(){

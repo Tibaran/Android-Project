@@ -7,86 +7,20 @@
     android:orientation="vertical">
     <include
         layout="@layout/toolbar" />
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginRight="1dp"
-            android:background="@drawable/border"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="10dp"
-                android:text="Clima (Arequipa) - (Playa-1)"
-                android:textSize="18dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/sol" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginLeft="50dp"
-                        android:src="@drawable/nube" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center"
-                        android:text="medianamente soleado"
-                        android:textSize="15dp" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="15dp"
-                    android:gravity="center"
-                    android:text="17/30"
-                    android:textSize="25dp" />
-
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:text="27 ªC"
-                android:textSize="20dp" />
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_height="wrap_content"
+        android:text="Lugares de la playa"
+        android:textSize="30dp"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"/>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listaLugares"
