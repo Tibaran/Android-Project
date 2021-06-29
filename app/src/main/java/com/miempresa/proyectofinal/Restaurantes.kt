@@ -1,5 +1,7 @@
 package com.miempresa.proyectofinal
 
+import android.content.Intent
+import android.net.Uri
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +24,15 @@ class Restaurantes : AppCompatActivity() {
         if(bundle!=null){
             cargarVista(bundle.getString("id_edificio").toString())
             cargarCapacidad(bundle.getString("edificio").toString())
+        }
+        val mensaje= "Buen dia me podria brindar informacion sobre su edificio"
+
+        btnContactar.setOnClickListener(){
+            val intent = Intent()
+            intent.setAction(Intent.ACTION_VIEW)
+            var uri = "whatsapp://send?phone="+51977480441+"&text="+mensaje
+            intent.setData(Uri.parse(uri))
+            startActivity(intent)
         }
 
 

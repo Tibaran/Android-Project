@@ -19,12 +19,12 @@
 
         <TextView
             android:id="@+id/lblObName"
-            android:layout_width="180dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Titulo"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:textSize="25dp"
+            android:text="Titulo"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
@@ -34,7 +34,7 @@
             android:text="20/30"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
 

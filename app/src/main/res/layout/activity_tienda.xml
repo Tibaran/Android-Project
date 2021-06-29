@@ -40,7 +40,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productos"
         android:layout_width="match_parent"
-        android:layout_height="160dp" />
+        android:layout_height="220dp" />
 
     <Button
         android:layout_width="140dp"
