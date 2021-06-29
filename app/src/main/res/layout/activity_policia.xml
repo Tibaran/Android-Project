@@ -15,6 +15,7 @@
         android:src="@drawable/policom"/>
 
     <TextView
+        android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Comisaria de Miraflores"
@@ -25,6 +26,7 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/txtDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -37,46 +39,40 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contacto"
         android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="18dp"
-        android:textColor="@color/black"/>
+        android:text="Direccion"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="texto direccion"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Celular"
+        android:text="Contacto"
         android:gravity="center"
-        android:layout_margin="10dp"
-        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
         android:textColor="@color/black"/>
 
+
     <TextView
+        android:id="@+id/txtContacto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="963870484"
         android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Telefono"
-        android:gravity="center"
         android:layout_margin="10dp"
-        android:textSize="15dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="01 5333245"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textColor="@color/black"/>
 
     <Button

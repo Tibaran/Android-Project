@@ -20,14 +20,13 @@ class Restaurantes : AppCompatActivity() {
         MyToolbar().show(this,"Restaurante", true)
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
-            Toast.makeText(this,bundle.getString("id_edificio").toString(), Toast.LENGTH_LONG).show()
-            cargarVista(bundle.getString("id_edificio").toString(),bundle.getString("edificio").toString() )
+            cargarVista(bundle.getString("id_edificio").toString())
             cargarCapacidad(bundle.getString("edificio").toString())
         }
 
 
     }
-    fun cargarVista(id_edificio: String, n_edificio: String){
+    fun cargarVista(id_edificio: String){
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
             val url = resources.getString(R.string.API_IP)+"buildingsInterest"
@@ -44,6 +43,7 @@ class Restaurantes : AppCompatActivity() {
                             if(id==id_edificio){
                                 txtNombre.setText(nombre)
                                 txtDescripcion.setText(descripcion)
+                                break
                             }
                         }
                     } catch (e: JSONException) {
@@ -79,6 +79,7 @@ class Restaurantes : AppCompatActivity() {
                                 response.getJSONObject(i).getString("edificioInteres")
                             if(edificio == n_edificio) {
                                 txtCapacidad.setText(estado + "/" + capacidad)
+                                break
                             }
                         }
 
