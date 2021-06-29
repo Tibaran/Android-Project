@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVSubPlaya>): RecyclerView.Adapter<AdaptadorElementosCVSubPlaya.ViewHolder>(){
     override fun getItemCount(): Int {
@@ -17,13 +17,14 @@ class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVSubPl
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val fTitulo = itemView.findViewById<TextView>(R.id.lblTitulo)
-        val fImagen= itemView.findViewById<ImageView>(R.id.imgCardView);
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder?.fTitulo?.text=ListaElementos[position].titulo
-        holder?.fImagen?.setImageBitmap(ListaElementos[position].imagen)
+        var imagen = holder.itemView.findViewById<ImageView>(R.id.imgCardViewSub)
+        val url = ListaElementos[position].imagen
+        Picasso.get().load(url).into(imagen)
         val id = ListaElementos[position].id
         val id_playa = ListaElementos[position].id_playa
 

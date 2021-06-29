@@ -124,13 +124,15 @@ class playas_subplayas : AppCompatActivity() {
                                 response.getJSONObject(i).getString("playa")
                             val nombre =
                                 response.getJSONObject(i).getString("nombre")
+                            val iurl =
+                                    response.getJSONObject(i).getString("imgSubPlaya")
                             if (id_playa.equals(playa_id)) {
                                 llenarLista.add(
                                     ElementosCVSubPlaya(
                                         id,
                                         id_playa,
                                         nombre,
-                                        BitmapFactory.decodeResource(resources, R.drawable.playa)
+                                        iurl
                                     )
                                 )
                             }
