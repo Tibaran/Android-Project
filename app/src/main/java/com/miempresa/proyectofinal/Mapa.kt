@@ -49,6 +49,6 @@ class Mapa : AppCompatActivity(), OnMapReadyCallback {
         // Add a marker in Sydney and move the camera
         val playa = coordenada
         mMap.addMarker(MarkerOptions().position(playa).title("Marcador"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(playa,15f))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(playa,10f))
     }
 }

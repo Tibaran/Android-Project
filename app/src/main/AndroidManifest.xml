@@ -76,7 +76,7 @@
             android:parentActivityName=".playas_subplayas" />
         <activity
             android:name=".introduccionPlayaLugares"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".playas_lugar" />
         <activity
             android:name=".playas_subplayas"
             android:parentActivityName=".playas_lugar" />
