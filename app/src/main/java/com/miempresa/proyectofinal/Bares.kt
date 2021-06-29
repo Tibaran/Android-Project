@@ -8,12 +8,13 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.activity_bares.*
+import kotlinx.android.synthetic.main.activity_bares.txtCapacidad
+import kotlinx.android.synthetic.main.activity_bares.txtDescripcion
+import kotlinx.android.synthetic.main.activity_bares.txtNombre
+import kotlinx.android.synthetic.main.activity_restaurantes.*
 import org.json.JSONException
 
 class Bares : AppCompatActivity() {
-    private var nom :String?=""
-    private var desc :String?=""
-    private var cap :String?=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bares)
@@ -21,20 +22,19 @@ class Bares : AppCompatActivity() {
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
             cargarVista(bundle.getString("id_edificio").toString())
-            cargarCapacidad(bundle.getString("id_edificio").toString())
+            cargarCapacidad(bundle.getString("edificio").toString())
         }
-        txtNombre.setText(nom)
-        txtDescripcion.setText(desc)
-        txtCapacidad.setText(cap)
     }
     fun cargarVista(id_edificio: String){
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
-            val url = resources.getString(R.string.API_IP)+"buildingsInterest/"+id_edificio+"/"
+            val url = resources.getString(R.string.API_IP)+"buildingsInterest"
             val stringRequest = JsonArrayRequest(url,
                 Response.Listener { response ->
                     try {
                         for (i in 0 until response.length()) {
+                            val id =
+                                response.getJSONObject(i).getString("id")
                             val nombre =
                                 response.getJSONObject(i).getString("nombreEI")
                             val descripcion =
@@ -43,8 +43,11 @@ class Bares : AppCompatActivity() {
                                 response.getJSONObject(i).getString("direccion")
                             val contacto =
                                 response.getJSONObject(i).getString("contacto")
-                            nom = nombre
-                            desc = descripcion
+                            if(id==id_edificio){
+                                txtNombre.setText(nombre)
+                                txtDescripcion.setText(descripcion)
+                                break
+                            }
                         }
 
                     } catch (e: JSONException) {
@@ -79,7 +82,8 @@ class Bares : AppCompatActivity() {
                             val edificio =
                                 response.getJSONObject(i).getString("edificioInteres")
                             if(edificio == n_edificio) {
-                                cap = estado + "/" + capacidad
+                                txtCapacidad.setText(estado + "/" + capacidad)
+                                break
                             }
                         }
 
