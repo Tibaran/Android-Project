@@ -22,9 +22,10 @@ class AdaptadorElementosCVPlaya(val ListaElementos:ArrayList<ElementosCVPlaya>):
         holder?.fTitulo?.text=ListaElementos[position].titulo
         var imagen = holder.itemView.findViewById<ImageView>(R.id.imgCardView)
 
-        val ubicacion = ListaElementos[position].ubicacion
+
         val url = ListaElementos[position].imagen
         Picasso.get().load(url).into(imagen)
+        val ubicacion = ListaElementos[position].ubicacion
         val id = ListaElementos[position].titulo
 
         var button = holder.itemView.findViewById<Button>(R.id.btnSubPlaya)
