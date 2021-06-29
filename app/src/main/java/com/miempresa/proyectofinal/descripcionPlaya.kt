@@ -21,7 +21,7 @@ class descripcionPlaya : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_descripcion_playa)
 
-        MyToolbar().show(this,"Descripcion Playa", true)
+        MyToolbar().show(this,"Lugares de la Playa", true)
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
             cargarLista(bundle.getString("id_playa").toString())

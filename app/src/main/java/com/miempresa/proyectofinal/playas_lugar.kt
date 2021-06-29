@@ -25,7 +25,7 @@ class playas_lugar : AppCompatActivity() {
 
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
-        MyToolbar().show(this,"Playas Lugar", true)
+        MyToolbar().show(this,"Regiones Perú", true)
         cargarLista()
 
     }

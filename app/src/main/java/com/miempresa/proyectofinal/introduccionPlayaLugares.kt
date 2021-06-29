@@ -11,7 +11,7 @@ class introduccionPlayaLugares : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_introduccion_playa)
-        MyToolbar().show(this,"Lugares", true)
+        MyToolbar().show(this,"Lugares de la Region", true)
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
             id_playa = bundle.getString("id").toString()

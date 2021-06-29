@@ -49,7 +49,7 @@ class playas_subplayas : AppCompatActivity() {
         TemMin = findViewById(R.id.txtTemMin)
         imagen = findViewById(R.id.imgclima)
 
-        MyToolbar().show(this,"SubPlayas", true)
+        MyToolbar().show(this,"Lista de Playas", true)
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
             id = bundle.getString("id").toString()
