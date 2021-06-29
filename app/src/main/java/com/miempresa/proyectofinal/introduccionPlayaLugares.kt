@@ -34,29 +34,29 @@ class introduccionPlayaLugares : AppCompatActivity() {
         btnBar.setOnClickListener(){
             val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
-            intent.putExtra("id_tipoEdificio", "2")
-            estadorepo.actualizarCategoria("2")
+            intent.putExtra("id_tipoEdificio", "Bares")
+            estadorepo.actualizarCategoria("Bares")
             startActivity(intent)
         }
         btnTienda.setOnClickListener(){
             val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
-            intent.putExtra("id_tipoEdificio", "3")
-            estadorepo.actualizarCategoria("3")
+            intent.putExtra("id_tipoEdificio", "Tienda")
+            estadorepo.actualizarCategoria("Tienda")
             startActivity(intent)
         }
         btnPolicia.setOnClickListener(){
             val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
-            intent.putExtra("id_tipoEdificio", "4")
-            estadorepo.actualizarCategoria("4")
+            intent.putExtra("id_tipoEdificio", "Policia")
+            estadorepo.actualizarCategoria("Policia")
             startActivity(intent)
         }
         btnSalva.setOnClickListener(){
             val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
-            intent.putExtra("id_tipoEdificio", "5")
-            estadorepo.actualizarCategoria("5")
+            intent.putExtra("id_tipoEdificio", "Salvavidas")
+            estadorepo.actualizarCategoria("Salvavidas")
             startActivity(intent)
         }
     }

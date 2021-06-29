@@ -33,8 +33,8 @@ class AdaptadorElementosCVEdificio(val ListaElementos:ArrayList<ElementosCVEdifi
                 when(estado.id_categoria){
                     "Restaurante"->Restaurantes::class.java
                     "Bares"->Bares::class.java
-                    "Tiendas"->Tienda::class.java
-                    "Policias"->Policia::class.java
+                    "Tienda"->Tienda::class.java
+                    "Policia"->Policia::class.java
                     "Salvavidas"->Salvavidas::class.java
                     else->listado_edificios::class.java
                 }

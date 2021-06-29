@@ -15,6 +15,7 @@
         android:src="@drawable/salva"/>
 
     <TextView
+        android:id="@+id/txtNomEdi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Hijos del Mar"
@@ -25,12 +26,32 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/txtInfor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:background="@color/celeste"
         android:gravity="center"
         android:text="Esta comprometidos con salvar la vida de las personas que esten en apuros dentro del mar."
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ubicacion"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtUbi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="ubicacion"
         android:textColor="@color/black"
         android:textSize="15dp" />
 
@@ -53,27 +74,10 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/txtCelu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="963870484"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Telefono"
-        android:gravity="center"
-        android:layout_margin="10dp"
-        android:textSize="15dp"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="01 5333245"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="20dp"
