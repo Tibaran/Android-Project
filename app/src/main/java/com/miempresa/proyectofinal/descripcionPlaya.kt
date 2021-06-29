@@ -24,7 +24,7 @@ class descripcionPlaya : AppCompatActivity() {
         MyToolbar().show(this,"Descripcion Playa", true)
         val bundle :Bundle?=intent.extras
         if(bundle!=null){
-            cargarLista(bundle.getString("id").toString())
+            cargarLista(bundle.getString("id_playa").toString())
         }
     }
     fun cargarLista(subplaya_id: String) {
@@ -45,7 +45,7 @@ class descripcionPlaya : AppCompatActivity() {
                             if (id.equals(subplaya_id)) {
                                 llenarLista.add(
                                     ElementosCVLugar(
-                                        estado.toInt(),
+                                        estado,
                                         BitmapFactory.decodeResource(resources, R.drawable.sombrilla)
                                     )
                                 )
@@ -63,7 +63,7 @@ class descripcionPlaya : AppCompatActivity() {
                 }, Response.ErrorListener { response ->
                     Toast.makeText(
                         applicationContext,
-                        response.message,
+                        "Verifique su conexion a internet",
                         Toast.LENGTH_LONG
                     ).show()
                 })

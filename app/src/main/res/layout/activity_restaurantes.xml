@@ -15,6 +15,7 @@
         android:src="@drawable/resta"/>
 
     <TextView
+        android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sabor Marino"
@@ -25,6 +26,7 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/txtDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -55,6 +57,7 @@
         android:textColor="@color/black"/>
 
     <TextView
+        android:id="@+id/txtCapacidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="15/20"

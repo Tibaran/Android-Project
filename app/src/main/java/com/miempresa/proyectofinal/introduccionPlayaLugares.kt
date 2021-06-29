@@ -26,8 +26,8 @@ class introduccionPlayaLugares : AppCompatActivity() {
         btnRestaurantes.setOnClickListener(){
             val intent = Intent(this, listado_edificios::class.java)
             intent.putExtra("id_playa", id_playa)
-            intent.putExtra("id_tipoEdificio", "1")
-            estadorepo.actualizarCategoria("1")
+            intent.putExtra("id_tipoEdificio", "Restaurante")
+            estadorepo.actualizarCategoria("Restaurante")
             startActivity(intent)
         }
 

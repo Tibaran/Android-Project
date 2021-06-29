@@ -26,7 +26,7 @@ class AdaptadorElementosCVSubPlaya(val ListaElementos:ArrayList<ElementosCVSubPl
         val url = ListaElementos[position].imagen
         Picasso.get().load(url).into(imagen)
         val id = ListaElementos[position].id
-        val id_playa = ListaElementos[position].id_playa
+        val id_playa = ListaElementos[position].titulo
 
         var button = holder.itemView.findViewById<Button>(R.id.btnSubPlaya)
         button.setText("Ver Lugares")

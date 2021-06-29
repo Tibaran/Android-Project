@@ -23,6 +23,7 @@ class AdaptadorElementosCVEdificio(val ListaElementos:ArrayList<ElementosCVEdifi
         holder?.fTitulo?.text=ListaElementos[position].titulo
         holder?.fImagen?.setImageBitmap(ListaElementos[position].imagen)
         val id_edificio = ListaElementos[position].id
+        val edificio = ListaElementos[position].titulo
         var estadorepo = EstadoRepositorio()
         var estado = estadorepo.ver()
 
@@ -30,15 +31,16 @@ class AdaptadorElementosCVEdificio(val ListaElementos:ArrayList<ElementosCVEdifi
         button.setOnClickListener(){
             val llamaractividad = Intent(holder.itemView.context,
                 when(estado.id_categoria){
-                    "1"->Restaurantes::class.java
-                    "2"->Bares::class.java
-                    "3"->Tienda::class.java
-                    "4"->Policia::class.java
-                    "5"->Salvavidas::class.java
+                    "Restaurante"->Restaurantes::class.java
+                    "Bares"->Bares::class.java
+                    "Tiendas"->Tienda::class.java
+                    "Policias"->Policia::class.java
+                    "Salvavidas"->Salvavidas::class.java
                     else->listado_edificios::class.java
                 }
             )
             llamaractividad.putExtra("id_edificio", id_edificio.toString())
+            llamaractividad.putExtra("edificio", edificio.toString())
             holder.itemView.context.startActivity(llamaractividad)
         }
     }

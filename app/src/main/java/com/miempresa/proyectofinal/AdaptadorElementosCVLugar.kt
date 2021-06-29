@@ -19,7 +19,7 @@ class AdaptadorElementosCVLugar(val ListaElementos:ArrayList<ElementosCVLugar>):
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder?.fImagen?.setImageBitmap(ListaElementos[position].imagen)
         //holder?.fImagen?.setImageDrawable(ListaElementos[position].imagen)
-        if(ListaElementos[position].estado==1){
+        if(ListaElementos[position].estado=="Activo"){
             holder?.fImagen?.setBackgroundResource(R.color.verde)
         }else{
             holder?.fImagen?.setBackgroundResource(R.color.rojo)

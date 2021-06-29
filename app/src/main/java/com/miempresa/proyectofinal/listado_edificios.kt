@@ -49,9 +49,9 @@ class listado_edificios : AppCompatActivity() {
                         try {
                             for (i in 0 until response.length()) {
                                 val playa_id =
-                                        response.getJSONObject(i).getString("nombreEI")
-                                val edificio_id =
                                         response.getJSONObject(i).getString("nombre")
+                                val edificio_id =
+                                        response.getJSONObject(i).getString("nombreEI")
                                 if (playa_id == id_playa){
                                     listEdificio.add(edificio_id)
                                 }
@@ -66,7 +66,7 @@ class listado_edificios : AppCompatActivity() {
                     }, Response.ErrorListener {
                 Toast.makeText(
                         applicationContext,
-                        "Revise su conexion a internet",
+                        "Revise su conexion a  LS",
                         Toast.LENGTH_LONG
                 ).show()
             })
@@ -80,19 +80,19 @@ class listado_edificios : AppCompatActivity() {
         var llenarLista = ArrayList<ElementosCVEdificio>()
         AsyncTask.execute {
             val queue = Volley.newRequestQueue(applicationContext)
-            val url = resources.getString(R.string.API_IP)+"/buildingsInterest"
+            val url = resources.getString(R.string.API_IP)+"buildingsInterest"
             val stringRequest = JsonArrayRequest(url,
                     Response.Listener { response ->
                         try {
                             for (i in 0 until response.length()) {
                                 val id =
                                         response.getJSONObject(i).getString("id")
-                                val id_tipo =
-                                        response.getJSONObject(i).getString("tipoEdificio")
                                 val nombre =
                                         response.getJSONObject(i).getString("nombreEI")
-                                if(listEdificio.contains(id)){
-                                    if(id_tipo == id_tipoEdificio){
+                                val tipo =
+                                    response.getJSONObject(i).getString("tipoEdificio")
+                                if(listEdificio.contains(nombre)){
+                                    if(tipo == id_tipoEdificio){
                                         llenarLista.add(ElementosCVEdificio(id,nombre,BitmapFactory.decodeResource(resources, R.drawable.restaurante)))
                                     }
                                 }
@@ -109,7 +109,7 @@ class listado_edificios : AppCompatActivity() {
                     }, Response.ErrorListener {
                 Toast.makeText(
                         applicationContext,
-                        "Revise su conexion a internet",
+                        "Revise su conexion a internet EDI",
                         Toast.LENGTH_LONG
                 ).show()
             })
